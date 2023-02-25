@@ -1,2 +1,2 @@
 # Curso_BI
-Minsait_2
+Minsait
