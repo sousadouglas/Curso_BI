@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS cidade(
+id_cidade string,
+ds_cidade string, 
+id_estado string
+)
+
+COMMENT 'Tabela de cidade' 
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE
+location '/datalake/raw/cidade/'
+TBLPROPERTIES("skip.header.line.count"="1");
+
+--------------------------------------------
+
+
+
+hdfs dfs -copyFromLocal /input/ /datalake/raw/categotia
+
