@@ -17,3 +17,6 @@ TBLPROPERTIES("skip.header.line.count"="1");
 
 hdfs dfs -copyFromLocal /input/ /datalake/raw/categotia
 
+select * from pedido as p
+inner join item_pedido as ip on p.id_pedido = ip.id_pedido
+limit 10;
